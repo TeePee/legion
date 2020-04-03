@@ -8,86 +8,82 @@
 
 
 ## ABOUT
-Legion, a fork of SECFORCE's Sparta, is an open source, easy-to-use, super-extensible and semi-automated network 
-penetration testing framework that aids in discovery, reconnaissance and exploitation of information systems. 
-[Legion](https://govanguard.com/legion) is developed and maintained by [GoVanguard](https://govanguard.com). 
-More information about Legion, including the [roadmap](https://govanguard.com/legion), can be found on it's project 
-page at [https://GoVanguard.com/legion](https://govanguard.com/legion).
-If you are interested in contributing to Legion, join our [Legion Keybase Team](https://keybase.io/team/govanguard.dev.legion).
+Legion, une branche de Sparta de SECFORCE, est un réseau open source, facile à utiliser, super-extensible et semi-automatisé
+cadre de tests de pénétration qui facilite la découverte, la reconnaissance et l'exploitation des systèmes d'information.
+[Legion](https://govanguard.com/legion) est développé et maintenu par[GoVanguard](https://govanguard.com). 
+Plus d'informations sur Legion, y compris le[roadmap](https://govanguard.com/legion), peut être trouvé sur son projet
+sur [https://GoVanguard.com/legion](https://govanguard.com/legion).
+Si vous souhaitez contribuer à la Légion, rejoignez notre [Legion Keybase Team](https://keybase.io/team/govanguard.dev.legion).
 
 ### FEATURES
 
-* Automatic recon and scanning with NMAP, whataweb, nikto, Vulners, Hydra, SMBenum, dirbuster, sslyzer, webslayer 
-and more (with almost 100 auto-scheduled scripts)
-* Easy to use graphical interface with rich context menus and panels that allow pentesters to quickly find and 
-exploit attack vectors on hosts
-* Modular functionality allows users to easily customize Legion and automatically call their own scripts/tools
-* Highly customizable stage scanning for ninja-like IPS evasion
-* Automatic detection of CPEs (Common Platform Enumeration) and CVEs (Common Vulnerabilities and Exposures)
-* Ties CVEs to Exploits as detailed in Exploit-Database
-* Realtime autosaving of project results and tasks
+* Reconnaissance et numérisation automatiques avec NMAP, whataweb, nikto, Vulners, Hydra, SMBenum, dirbuster, sslyzer, webslayer
+et plus (avec près de 100 scripts auto-programmés)
+* Interface graphique facile à utiliser avec des menus contextuels et des panneaux riches qui permettent aux pentesters de              trouver et exploiter les vecteurs d'attaque sur les hôtes
+* La fonctionnalité modulaire permet aux utilisateurs de personnaliser facilement Legion et d'appeler automatiquement leurs propres scripts / outils
+* Balayage de scène hautement personnalisable pour une évasion IPS de type ninja
+* Détection automatique des CPE (Common Platform Enumeration) et des CVE (Common Vulnerabilities and Exposures)
+* Lie les CVE aux exploits comme détaillé dans Exploit-Database
+* Enregistrement automatique en temps réel des résultats et des tâches du projet
 
-### NOTABLE CHANGES FROM SPARTA
+### CHANGEMENTS NOTABLES DE SPARTA
 
-* Refactored from Python 2.7 to Python 3.6 and the elimination of deprecated and unmaintained libraries
-* Upgraded to PyQT5, increased responsiveness, less buggy, more intuitive GUI that includes features like:
-   * Task completion estimates
-   * 1-Click scan lists of ips, hostnames and CIDR subnets
-   * Ability to purge results, rescan hosts and delete hosts
-   * Granular NMAP scanning options
-* Support for hostname resolution and scanning of vhosts/sni hosts
-* Revise process queuing and execution routines for increased app reliability and performance
-* Simplification of installation with dependency resolution and installation routines
-* Realtime project autosaving so in the event some goes wrong, you will not lose any progress!
-* Docker container deployment option
-* Supported by a highly active development team
+* Refactorisé de Python 2.7 à Python 3.6 et l'élimination des bibliothèques obsolètes et non entretenues
+* Mise à niveau vers PyQT5, réactivité accrue, moins de bugs, interface graphique plus intuitive qui comprend des fonctionnalités telles que:
+   * Estimations de fin de tâche
+   * Listes de scan en 1 clic des sous-réseaux ips, hostnames et CIDR
+   * Possibilité de purger les résultats, de réanalyser les hôtes et de supprimer les hôtes
+   * Options de numérisation NMAP granulaire
+* Prise en charge de la résolution du nom d'hôte et de l'analyse des hôtes vhosts / sni
+* Révisez les routines de mise en file d'attente et d'exécution des processus pour améliorer la fiabilité et les performances des applications
+* Simplification de l'installation avec résolution des dépendances et routines d'installation
+* Sauvegarde automatique du projet en temps réel donc en cas de problème, vous ne perdrez aucun progrès!
+* Option de déploiement de conteneur Docker
+* Soutenu par une équipe de développement très active
 
 ### GIF DEMO 
 ![](https://govanguard.com/wp-content/uploads/2019/02/LegionDemo.gif)
 
 ## INSTALLATION
 
-It is preferable to use the docker image over a traditional installation. This is because of all the dependancy 
-requirements and the complications that occur in environments which differ from a clean, non-default installation.
+Il est préférable d'utiliser l'image docker par rapport à une installation traditionnelle. C'est à cause de toute la dépendance
+exigences et les complications qui se produisent dans des environnements qui diffèrent d'une installation propre et non par défaut.
 
-NOTE: Docker versions of Legion are *unlikely* to work when run as root or under a root X!
+REMARQUE: les versions Docker de Legion sont * peu susceptibles * de fonctionner lorsqu'elles sont exécutées en tant que root ou sous un root X!
 
-### Supported Distributions
+### Distributions prises en charge
 #### Docker runIt script
 
-runIt supports Ubuntu 18, Fedora 30, Parrot and Kali at this time. It is possible to run the docker image on any 
-Linux distribution, however, different distributions have different hoops to jump through to get a docker app to 
-be able to connect to the X server. Everyone is welcome to try and figure those hoops out and create a PR for runIt. 
+runIt prend en charge Ubuntu 18, Fedora 30, Parrot et Kali pour le moment. Il est possible d'exécuter l'image docker sur n'importe quel
+La distribution Linux, cependant, différentes distributions ont des cercles différents à parcourir pour obtenir une application docker
+pouvoir se connecter au serveur X. Tout le monde est le bienvenu pour essayer de comprendre ces cerceaux et créer un PR pour runIt. 
 
-#### Traditional Install
+#### Installation traditionnelle
 
-We can only promise correct operation on Ubuntu 18 using the traditional installation at this time. While it should 
-work on ParrotOS, Kali and others, until we have Legion packaged and placed into the repos for each of these distros 
-it's musical chairs with regards to platform updates changing and breaking dependencies.
+Nous ne pouvons pas promettre un fonctionnement correct sur Ubuntu 18 en utilisant l'installation traditionnelle pour le moment. Alors qu'il devrait
+travailler sur ParrotOS, Kali et autres, jusqu'à ce que Legion soit emballé et placé dans les dépôts pour chacune de ces distributions
+ce sont des chaises musicales en ce qui concerne les mises à jour de plate-forme changeant et brisant les dépendances.
 
 ### DOCKER METHOD
 ------
 
 Linux with Local X11:
 
- - Assumes Docker and X11 are installed and setup (including running docker commands as a non-root user)
- - It is critical to follow all the instructions for running as a non-root user. Skipping any of them will result in 
- complications getting docker to communicate with the X server
- - See detailed instructions to setup docker [here](#docker-setup) and enable running containers as non-root users 
- and granting docker group ssh rights [here](#docker-setup-non-root)
+ - Suppose que Docker et X11 sont installés et configurés (y compris l'exécution de commandes Docker en tant qu'utilisateur non root)
+ - Il est essentiel de suivre toutes les instructions pour fonctionner en tant qu'utilisateur non root. Sauter l'un d'eux entraînera des complications pour que docker communique avec le serveur X
+ - Voir les instructions détaillées pour configurer docker [içi](#docker-setup) et activer l'exécution de conteneurs en tant qu'utilisateurs non root et octroi de droits ssh à un groupe de dockers [içi](#docker-setup-non-root)
 
- - Within Terminal:
+ - avec le Terminal:
    ```
    git clone https://github.com/GoVanguard/legion.git
    cd legion/docker
    chmod +x runIt.sh
    ./runIt.sh
    ```
-
-Linux with Remote X11:
- - Assumes Docker and X11 are installed and setup
- - Replace X.X.X.X with the IP of the remote running X11.
- - Within Terminal:
+Linux avec Remote X11:
+ - Suppose que Docker et X11 sont installés et configurés
+ - Remplacez X.X.X.X par l'IP de la télécommande exécutant X11.
+ - Dans le terminal:
    ```
    git clone https://github.com/GoVanguard/legion.git
    cd legion/docker
@@ -95,14 +91,14 @@ Linux with Remote X11:
    ./runIt.sh X.X.X.X
    ```
 
-Windows under WSL using Xming and Docker Desktop:
- - Assumes Xming is installed in Windows
- - Assumes Docker Desktop is installed in Windows, Docker Desktop is running in Linux containers mode and 
- Docker Desktop is connected to WSL
- - See detailed instructions [here](#docker-setup-wsl)
- - Replace X.X.X.X with the IP with which Xming has registered itself.
-   - Right click Xming in system tray -> View log and see IP next to "XdmcpRegisterConnection: newAddress"
- - Within Terminal:
+Windows sous WSL utilisant Xming et Docker Desktop:
+ - Suppose que Xming est installé dans Windows
+ - Suppose que Docker Desktop est installé sous Windows, Docker Desktop s'exécute en mode conteneurs Linux et
+ Docker Desktop est connecté à WSL
+ - Voir les instructions détaillées [içi](# docker-setup-wsl)
+ - Remplacez X.X.X.X par l'adresse IP avec laquelle Xming s'est enregistré.
+   - Cliquez avec le bouton droit sur Xming dans la barre d'état système -> Afficher le journal et voir IP à côté de "XdmcpRegisterConnection: newAddress"
+ - Dans le terminal:
    ```
    git clone https://github.com/GoVanguard/legion.git
    cd legion/docker
@@ -110,19 +106,19 @@ Windows under WSL using Xming and Docker Desktop:
    sudo ./runIt.sh X.X.X.X
    ```
 
-Windows using Xming and Docker Desktop without WSL:
- - Why? Don't do this. :)
+Windows utilisant Xming et Docker Desktop sans WSL:
+ - Pourquoi? Ne fais pas ça. :)
 
 
-OSX using XQuartz:
- - Not yet in runIt.sh script.
- - Possible to setup using socat. See instructions here: 
- https://kartoza.com/en/blog/how-to-run-a-linux-gui-application-on-osx-using-docker/
+OSX utilisant XQuartz:
+ - Pas encore dans le script runIt.sh.
+ - Possibilité de configuration à l'aide de socat. Voir les instructions [ici](https://kartoza.com/en/blog/how-to-run-a-linux-gui-application-on-osx-using-docker/)
 
 
 <a name="docker-setup"></a>
-Setup Docker on Linux:
- - To install docker components typically needed and add setup the environment for docker, under a term, run:
+Configuration de Docker sous Linux:
+ - Pour installer les composants de docker généralement nécessaires et ajouter la configuration de l'environnement pour docker, sous un terme, exécutez:
+
    ```
    sudo apt-get update
    sudo apt-get install -y docker.io python-pip -y
@@ -131,8 +127,8 @@ Setup Docker on Linux:
    ```
 
 <a name="docker-setup-non-root"></a>
-Setup Docker to allow non-root users:
- - To enable non-root users to run docker commands, under a term, run:
+Configurez Docker pour autoriser les utilisateurs non root:
+ - Pour permettre aux utilisateurs non root d'exécuter des commandes docker, sous un terme, exécutez:
    ```
    sudo usermod -aG docker $USER
    sudo chmod 666 /var/run/docker.sock
@@ -190,10 +186,10 @@ Setup Hyper-V, Docker Desktop, Xming and WSL:
    ```
 
 ### TRADITIONAL METHOD
- - Please use the docker image where possible! It's becoming very difficult to support all the various platforms 
- and their own quirks
- - Assumes Ubuntu, Kali or Parrot Linux is being used with Python 3.6 installed.
- - Within Terminal:
+ - Veuillez utiliser l'image docker si possible! Il devient très difficile de prendre en charge toutes les différentes plates-formes
+ et leurs propres caprices
+ - Suppose qu'Ubuntu, Kali ou Parrot Linux est utilisé avec Python 3.6 installé.
+ - Dans le terminal:
    ```
    git clone https://github.com/GoVanguard/legion.git
    cd legion
